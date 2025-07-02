@@ -9,16 +9,16 @@ function Divcontainer() {
     const [isOpen,setIsopen] = useState(true)
 
     const increaseStep = () => {
-        (step < 3) ? setStep(step = step + 1) : "Limit is Exceding"
+        (step < 3) ? setStep((s) => s + 1) : "Limit is Exceding"
     }
 
     const decearseStep = () => {
-        (step > 1 ) ? setStep(step = step - 1) :"Limit is decreasing"
+        (step > 1 ) ? setStep((s) => s - 1) :"Limit is decreasing"
     }
 
     return (
         <>
-            <button className='close' onClick={()=>{setIsopen(!isOpen)}}>&times;</button>
+            <button className='close' onClick={()=>{setIsopen((isOpen) => !isOpen)}}>&times;</button>
             {isOpen ?
                 <div className='steps'>
                     <StepCompleteIndicator step={step}/>
