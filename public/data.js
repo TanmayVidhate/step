@@ -5,3 +5,6 @@ const messages = [
   "Invest your new income 🤑",
 ];
  
+export{
+    messages
+}
