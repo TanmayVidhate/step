@@ -6,7 +6,7 @@ import { useState } from 'react'
 function Divcontainer() {
 
     let [step,setStep] = useState(1)
-    const [isOpen,setIsclose] = useState(true)
+    const [isOpen,setIsopen] = useState(true)
 
     const increaseStep = () => {
         (step < 3) ? setStep(step = step + 1) : "Limit is Exceding"
@@ -18,7 +18,7 @@ function Divcontainer() {
 
     return (
         <>
-            <button className='close' onClick={()=>{setIsclose(!isOpen)}}>&times;</button>
+            <button className='close' onClick={()=>{setIsopen(!isOpen)}}>&times;</button>
             {isOpen ?
                 <div className='steps'>
                     <StepCompleteIndicator step={step}/>
