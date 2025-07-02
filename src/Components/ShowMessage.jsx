@@ -1,9 +1,10 @@
 import React from 'react'
 import "./index.css"
-function ShowMessage() {
+import {messages} from "../../public/data.js"
+function ShowMessage({step}) {
   return (
     <>
-        <p className='message'>Hello</p>
+      <p className='message'>{messages[step-1]}</p>
     </>
   )
 }
