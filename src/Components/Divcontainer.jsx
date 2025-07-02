@@ -7,11 +7,11 @@ function Divcontainer() {
     let [step,setStep] = useState(1)
 
     const increaseStep = () => {
-        setStep(step = step + 1)
+        (step < 3) ? setStep(step = step + 1) : "Limit is Exceding"
     }
 
     const decearseStep = () => {
-        setStep(step = step - 1)
+        (step > 1 ) ? setStep(step = step - 1) :"Limit is decreasing"
     }
     return (
         <>
