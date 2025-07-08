@@ -1,10 +1,13 @@
 import React from 'react'
 import "./index.css"
 
-function ShowMessage({children}) {
+function ShowMessage({ step, children }) {
   return (
     <>
-      <p className='message'>{children}</p>
+      <div className='message'>
+        <h3>Step {step}</h3>
+        {children}
+      </div>
     </>
   )
 }
