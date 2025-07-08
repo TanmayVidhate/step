@@ -1,3 +1,4 @@
+import {messages} from "../../public/data.js"
 import StepCompleteIndicator from './StepCompleteIndicator.jsx'
 import ShowMessage from './ShowMessage.jsx'
 import DesignButton from './DesignButton.jsx'
@@ -22,7 +23,7 @@ function Divcontainer() {
             {isOpen ?
                 <div className='steps'>
                     <StepCompleteIndicator step={step}/>
-                    <ShowMessage step={step}/>
+                    <ShowMessage>{messages[step-1]}</ShowMessage>
                     <div className='buttons'>
                         <DesignButton onButtonClick={()=>{decearseStep()}}> <span>👈</span> Previous</DesignButton>
                         <DesignButton onButtonClick={()=>{increaseStep()}}> Next <span>👉</span> </DesignButton>
