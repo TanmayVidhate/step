@@ -1,8 +1,8 @@
 import "./index.css"
-function DesignButton({text,onButtonClick}) {
+function DesignButton({onButtonClick , children}) {
     return (
         <>
-            <button style={{backgroundColor:"#7950f2",color:"#fff"}} onClick={onButtonClick}>{text}</button>
+            <button  onClick={onButtonClick}>{children}</button>
         </>
     )
 }

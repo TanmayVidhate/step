@@ -24,8 +24,8 @@ function Divcontainer() {
                     <StepCompleteIndicator step={step}/>
                     <ShowMessage step={step}/>
                     <div className='buttons'>
-                        <DesignButton text={"Previous"} onButtonClick={()=>{decearseStep()}}/>
-                        <DesignButton text={"Next"} onButtonClick={()=>{increaseStep()}}/>
+                        <DesignButton onButtonClick={()=>{decearseStep()}}> <span>👈</span> Previous</DesignButton>
+                        <DesignButton onButtonClick={()=>{increaseStep()}}> Next <span>👉</span> </DesignButton>
                     </div>
                 </div>
                 :
